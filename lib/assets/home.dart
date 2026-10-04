@@ -28,7 +28,7 @@ class HomeAppBar extends StatelessWidget {
   
   final GlobalKey <ScaffoldState> scaffoldkey;
 
-   HomeAppBar({
+   const HomeAppBar({
     super.key,
     required this.size,
     required this.scaffoldkey
@@ -59,7 +59,7 @@ class HomeAppBar extends StatelessWidget {
 }
 
 class BasicPage extends StatefulWidget {
-    BasicPage({
+    const BasicPage({
     super.key,
     required this.size,
     required this.sizeAlign,
