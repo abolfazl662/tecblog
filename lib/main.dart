@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart'
         GlobalMaterialLocalizations,
         GlobalWidgetsLocalizations;
 import 'package:tecblog/assets/color.dart';
+import 'package:tecblog/screenpage/pre-made/tamrin.dart';
 import 'package:tecblog/screenpage/writeblogsign.dart';
 import 'package:tecblog/splashscreen.dart';
 
@@ -61,7 +62,7 @@ class RootApp extends StatelessWidget {
             border: OutlineInputBorder(borderRadius: BorderRadius.circular(20),),
            )
       ),
-      home: Writinganarticle()
+      home: Tamrin()
       
     );
   }
