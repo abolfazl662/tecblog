@@ -6,6 +6,7 @@ import 'package:tecblog/screenpage/pre-made/tamrinrx.dart';
 class Tamrin extends StatelessWidget {
   Tamrin({super.key});
   Rx <Tamrinrx> tamrinRX = Tamrinrx(name: "سرور آمریکا", price: "1.200.000", off: "0.000001٪").obs;
+  RxBool showd = false.obs;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,6 +17,7 @@ class Tamrin extends StatelessWidget {
             Obx(() {
               return Column(
                 children: [
+                  showd.isTrue?Text("im father tec blog"):Icon(Icons.car_crash),
                   Text(tamrinRX.value.name),
                   Text(tamrinRX.value.price),
                   Text(tamrinRX.value.off),
@@ -25,6 +27,7 @@ class Tamrin extends StatelessWidget {
             ElevatedButton(onPressed: () {
               tamrinRX.update((val) {
                 val!.name="سرور ایران پهلوی";
+                showd.isTrue?showd.value=false:showd.value=true;
               },);
             }, child: Text("seek")),
           ],
