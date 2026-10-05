@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tecblog/screenpage/pre-made/tamrinrx.dart';
 
 // ignore: must_be_immutable
 class Tamrin extends StatelessWidget {
   Tamrin({super.key});
-  var sick =0.obs;
+  Rx <Tamrinrx> tamrinRX = Tamrinrx(name: "سرور آمریکا", price: "1.200.000", off: "0.000001٪").obs;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,16 +14,22 @@ class Tamrin extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Obx(() {
-              return Text("سلام$sick");
-            },),
-           ElevatedButton(onPressed: () {
-              sick=sick+1;
-            }, child: Text("seek"))
-            
+              return Column(
+                children: [
+                  Text(tamrinRX.value.name),
+                  Text(tamrinRX.value.price),
+                  Text(tamrinRX.value.off),
+                ],
+              );
+            }),
+            ElevatedButton(onPressed: () {
+              tamrinRX.update((val) {
+                val!.name="سرور ایران پهلوی";
+              },);
+            }, child: Text("seek")),
           ],
         ),
       ),
     );
   }
-  
 }
