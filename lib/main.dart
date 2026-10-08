@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart'
         GlobalCupertinoLocalizations,
         GlobalMaterialLocalizations,
         GlobalWidgetsLocalizations;
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:tecblog/assets/color.dart';
 import 'package:tecblog/screenpage/pre-made/tamrin.dart';
 import 'package:tecblog/screenpage/writeblogsign.dart';
@@ -26,7 +27,7 @@ class RootApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
   
-    return MaterialApp(
+    return GetMaterialApp(
       scaffoldMessengerKey: messengerKey,
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
