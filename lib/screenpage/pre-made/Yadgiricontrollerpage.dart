@@ -1,14 +1,17 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tecblog/screenpage/pre-made/tamringetx.dart';
 import 'package:tecblog/screenpage/pre-made/tamrinrx.dart';
 import 'package:tecblog/screenpage/pre-made/yadgiricontroller.dart';
 
 // ignore: must_be_immutable
 class Yadgiricontrollerpage extends StatelessWidget {
   Yadgiricontrollerpage({super.key});
-  Yadgiricontroller yadgiricontroller = Get.put(Yadgiricontroller(yadgiricontroller: Tamrinrx(name: "kechap", price: "15", off:"77").obs));
+  
   //Rx <Tamrinrx> tamrinRX = Tamrinrx(name: "سرور آمریکا", price: "1.200.000", off: "0.000001٪").obs;
+  // ignore: non_constant_identifier_names
+  Yadgiricontroller Tamrin = Get.put(Yadgiricontroller(tamrin: Tamrinrx(name: "ادامس", price: "", off: "").obs));
   RxBool onkossher = false.obs;
   @override
   Widget build(BuildContext context) {
@@ -22,23 +25,27 @@ class Yadgiricontrollerpage extends StatelessWidget {
               return Column(
                 children: [
                   //onkossher.isTrue?Text("data"):Icon(Icons.ice_skating),
-                  Text(yadgiricontroller.yadgiricontroller.value.name,style: TextStyle(color: Colors.black),),
-                  Text(yadgiricontroller.yadgiricontroller.value.price),
-                  Text(yadgiricontroller.yadgiricontroller.value.off),
+                  Text(Tamrin.tamrin.value.name),
+                  Text(""),
+                  Text(""),
                 ],
               );
             }),
             ElevatedButton(onPressed: () {
-             yadgiricontroller.yadgiricontroller.update(
-              (val) {
-                val!.name = "شیر کوکاعین";
-              },
-             );
+            Tamrin.tamrin.update((val) {
+              val!.name = "کاندوم";
+            },);
             }, child: Text("seek")),
 
              ElevatedButton(onPressed: () {
               Get.back();
             }, child: Text("back")),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(Tamringetx());
+              },
+              child: Text("getgo"),
+            ),
           ],
         ),
       ),

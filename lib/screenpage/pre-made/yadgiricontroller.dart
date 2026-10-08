@@ -4,6 +4,6 @@ import 'package:tecblog/screenpage/pre-made/tamrinrx.dart';
 
 // ignore: camel_case_types
 class Yadgiricontroller extends GetxController {
-  Rx <Tamrinrx> yadgiricontroller ;
-  Yadgiricontroller ({required this.yadgiricontroller});
+  Rx <Tamrinrx> tamrin = Tamrinrx(name: "تیتاب", price: "120", off: "0.000001").obs;
+  Yadgiricontroller ({required this.tamrin});
 }
