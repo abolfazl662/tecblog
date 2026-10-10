@@ -1,28 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tecblog/screenpage/pre-made/Yadgiricontrollerpage.dart';
-import 'package:tecblog/screenpage/pre-made/tamringetbuilder.dart';
-import 'package:tecblog/screenpage/pre-made/yadgiricontroller.dart';
+import 'package:tecblog/screenpage/pre-made/tamrinrx.dart';
+import 'package:tecblog/screenpage/pre-made/yadgiricontrollergetbuilder.dart';
 
 // ignore: must_be_immutable
-class Tamringetx extends StatelessWidget {
-  Tamringetx({super.key});
+class Tamringetbuilder extends StatelessWidget {
+  
+  Tamringetbuilder({super.key});
   //Rx <Tamrinrx> tamrinRX = Tamrinrx(name: "سرور آمریکا", price: "1.200.000", off: "0.000001٪").obs;
+  // 👇 for use get buider
+  final controller = Get.put(YadgiricontrollerGetbuilder(tamrin: Tamrinrx(name: "سیک اول", price: "", off: "")));
   RxBool onkossher = false.obs;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green,
+      backgroundColor: Colors.cyan,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            GetX(
-              builder: (Yadgiricontroller yas) {
+          children: [ 
+            //only get builde use <...>
+            GetBuilder <YadgiricontrollerGetbuilder>(
+              builder: (YadgiricontrollerGetbuilder yas) {
                 return Column(
                   children: [
                     onkossher.isTrue ? Text("data") : Icon(Icons.ice_skating),
-                    Text(yas.tamrin.value.name),
+                    // use get builder not use value
+                    Text(yas.tamrin.name),
                     Text(""),
                     Text(""),
                   ],
@@ -30,22 +35,14 @@ class Tamringetx extends StatelessWidget {
               },
             ),
             ElevatedButton(onPressed: () {
-             Get.find<Yadgiricontroller>().tamrin.update((val) {
-               val!.name="im live in iran ";
-             },);
+              //dont froge ()
+            Get.find<YadgiricontrollerGetbuilder>().meghdar();
             }, child: Text("seek")),
             ElevatedButton(
               onPressed: () {
                 Get.to(Yadgiricontrollerpage());
               },
               child: Text("next"),
-            ),
-            SizedBox(height: 30,),
-             ElevatedButton(
-              onPressed: () {
-                Get.to(Tamringetbuilder());
-              },
-              child: Text("next page to get builder"),
             ),
           ],
         ),
