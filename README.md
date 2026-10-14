@@ -1,10 +1,3 @@
-import os, zipfile, textwrap
-
-base = "/mnt/data/tecblog-cyberpunk"
-os.makedirs(base + "/.github/workflows", exist_ok=True)
-os.makedirs(base + "/assets", exist_ok=True)
-
-readme = r'''<div align="center">
 
 <img src="assets/neon-banner.svg" width="100%" alt="TecBlog animated neon banner" />
 
