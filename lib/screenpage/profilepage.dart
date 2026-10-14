@@ -1,8 +1,8 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tecblog/assets/color.dart';
-import 'package:tecblog/assets/home.dart';
+import 'package:tecblog/component/color.dart';
+import 'package:tecblog/component/home.dart';
 import 'package:tecblog/gen/assets.gen.dart';
 
 class BasicProfilePage extends StatelessWidget {

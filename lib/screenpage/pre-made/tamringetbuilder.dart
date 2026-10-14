@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tecblog/screenpage/pre-made/Yadgiricontrollerpage.dart';
+import 'package:tecblog/screenpage/pre-made/tamringetbuilderListview.dart';
 import 'package:tecblog/screenpage/pre-made/tamrinrx.dart';
 import 'package:tecblog/screenpage/pre-made/yadgiricontrollergetbuilder.dart';
 
@@ -22,6 +23,7 @@ class Tamringetbuilder extends StatelessWidget {
           children: [ 
             //only get builde use <...>
             GetBuilder <YadgiricontrollerGetbuilder>(
+              //dont froge name for (next class)
               builder: (YadgiricontrollerGetbuilder yas) {
                 return Column(
                   children: [
@@ -40,7 +42,7 @@ class Tamringetbuilder extends StatelessWidget {
             }, child: Text("seek")),
             ElevatedButton(
               onPressed: () {
-                Get.to(Yadgiricontrollerpage());
+                Get.to(TamringetbuilderListviwe());
               },
               child: Text("next"),
             ),

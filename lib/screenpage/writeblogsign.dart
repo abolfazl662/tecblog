@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tecblog/assets/color.dart';
-import 'package:tecblog/assets/string.dart';
+import 'package:tecblog/component/color.dart';
+import 'package:tecblog/component/string.dart';
 import 'package:tecblog/gen/assets.gen.dart';
 import 'package:flutter_validators/flutter_validators.dart';
 // ignore: unused_import

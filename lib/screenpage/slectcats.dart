@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tecblog/assets/Model/fakedata.dart';
-import 'package:tecblog/assets/color.dart';
-import 'package:tecblog/assets/home.dart';
-import 'package:tecblog/assets/string.dart';
+import 'package:tecblog/component/color.dart';
+import 'package:tecblog/component/home.dart';
+import 'package:tecblog/component/string.dart';
 import 'package:tecblog/gen/assets.gen.dart';
 
 class SelectCats extends StatefulWidget {

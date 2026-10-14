@@ -31,6 +31,7 @@ class Tamringetx extends StatelessWidget {
             ),
             ElevatedButton(onPressed: () {
              Get.find<Yadgiricontroller>().tamrin.update((val) {
+              //dont froge ! for val or update in getx
                val!.name="im live in iran ";
              },);
             }, child: Text("seek")),

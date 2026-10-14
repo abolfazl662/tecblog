@@ -5,7 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart'
         GlobalMaterialLocalizations,
         GlobalWidgetsLocalizations;
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:tecblog/assets/color.dart';
+import 'package:tecblog/component/color.dart';
 import 'package:tecblog/screenpage/pre-made/tamrin.dart';
 import 'package:tecblog/screenpage/writeblogsign.dart';
 import 'package:tecblog/splashscreen.dart';
